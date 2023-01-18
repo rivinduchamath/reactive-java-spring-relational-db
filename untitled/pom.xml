@@ -5,23 +5,45 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.12.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.4.0</version>
+        <relativePath/>
     </parent>
     <packaging>jar</packaging>
     <groupId>com</groupId>
-    <artifactId>catalog-Service</artifactId>
-
+    <artifactId>order-Service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>catalog-engine</name>
-    <description>catalog-Service</description>
+    <name>order-engine</name>
+    <description>order-Service</description>
     <properties>
-        <java.version>11</java.version>
-        <testcontainers.version>1.16.2</testcontainers.version>
-        <spring-javaformat.version>0.0.34</spring-javaformat.version>
-        <jjwt.version>0.11.5</jjwt.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>dev.miku</groupId>
+            <artifactId>r2dbc-mysql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>redis.clients</groupId>-->
+<!--            <artifactId>jedis</artifactId>-->
+<!--            <version>3.3.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-cache</artifactId>-->
+<!--            <version>2.4.3</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
+<!--            <version>2.4.3</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>-->
+<!--            <version>2.3.12.RELEASE</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-r2dbc</artifactId>
@@ -31,50 +53,50 @@
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.hibernate.reactive</groupId>
             <artifactId>hibernate-reactive-core</artifactId>
-            <version>1.1.9.Final</version>
+            <version>1.0.0.Beta1</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
-            <version>4.3.6</version>
+            <version>3.9.4</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-mysql-client</artifactId>
-            <version>4.3.6</version>
+            <version>3.9.4</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-jdbc-client</artifactId>
-            <version>4.3.6</version>
+            <version>3.9.4</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-            <version>8.0.30</version>
+            <version>8.0.22</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.4</version>
         </dependency>
-
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.6.7.Final</version>
+            <version>5.4.25.Final</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>6.0.3</version>
+            <version>5.3.10</version>
         </dependency>
-
     </dependencies>
-
 
     <build>
         <plugins>
